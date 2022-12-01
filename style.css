@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 5px;
+}
+
+body{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-height: 100%;
+    background-image:  url('./fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.logo{
+    width: 105px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 0%;
+    padding: 0%;
+}
+.nd{
+    height: 100px;
+}
+.logo:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.logo2{
+    width: 90px;
+    border-radius: 20px;
+}
+.logo2:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+h1{
+    color: pink;
+    text-shadow: 0px 0px 1px 1px bisque;
+    text-shadow: 1px 1px brown;
+}
+.header {
+    text-align: center;
+    grid-area: header;
+    background-image: url('./fondoheader.webp');
+    background-size: cover;
+    height: 480px;
+    display: grid;
+    grid-template-columns: 1fr  2fr 1fr;
+}
+.uno{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.uno:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.dos{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.dos:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.tres{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.tres:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.cuatro{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.cuatro:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.navbar {
+    grid-area: navbar;
+    background-image: url('Marca de Agua Café Colao.png');
+    background-size: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 10px;
+}
+.nicol1{
+    width: 90px;
+}
+.nicol2{
+    width: 90px;
+}
+.nicol3{
+    width: 90px;
+}
+.nicol4{
+    width: 100px;
+}
+.mensaje{
+    text-align: left;
+    text-shadow: 1px 1px rgba(105, 140, 255, 0.521);font-size: 1.5rem;
+}
+.imgnav{
+    width: 50px;
+    border-radius: 20px;
+}
+.logo3{
+    width: 400px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-image: url('Granos de café 2.jpg');
+    background-size: cover;
+    text-align: justify;
+    color: rgb(194, 57, 52);
+    
+}
+.main {
+    
+    grid-area: main;
+    background-image: url('Parrilla 1.jpg');
+    background-size: cover;
+    background-position-x: left;
+}
+.imgmain{
+    width: 100px;
+    border-radius: 20px;
+}
+.imgmain:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+.footer {
+    grid-area: footer;
+    background-image: url('Granos de café 1.jpg');
+    background-size: 120px;
+    background-position-y: start;
+}
+
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 480px
+        "navbar  navbar" auto
+        "sidebar main"   auto 
+        "footer  footer" 70px/
+        200px    auto;
+        overflow-y: scroll;
+    }
+}
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header header"  480px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  200px/
+        150px    auto    200px;
+        overflow-y: scroll;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"       100px
+        "dos"       100px
+        "tres"      100px
+        "cuatro"    100px;
+        grid-row-gap: 20px;
+    }
+}
+.vs{
+    width: 220px;
+    height: 220px;
+}
